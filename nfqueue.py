@@ -20,7 +20,7 @@ def Filtrage_paquet(packet):
     regles=[ipsrc,ipdst]
 
 #montre a l'utilisateur l'ip src et dst du paquet
-    #boucle pour blacklist / whitelist
+#boucle pour blacklist / whitelist
     if regles in whitelist:
         packet.accept()
     else:
