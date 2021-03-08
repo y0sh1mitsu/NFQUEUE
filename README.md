@@ -6,7 +6,7 @@ Le script est écrit en Python 3, il utilise les librairies :
 - Netfilterqueue : Pour le filtrage des paquets en utilisant le Firewall Netfilter et l'option Queue afin de mettre ces derniers en attente le temps d'une décision.
 
 <p align="center">
-  <img width="500" height="450" src="Schéma_NFQUEUE.png">
+  <img width="450" height="250" src="Schéma_NFQUEUE.png">
 </p>
 
 Actuellement une action manuelle de la part d'un utilisateur est nécessaire afin de filtrer les paquets un à un. 
