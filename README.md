@@ -1,18 +1,18 @@
 # NFQUEUE
-Projet crée suite à une demande d'un script en Python de la part de mon professeur de Sécurité de Système Avancée au sein de l'École Supérieure de Génie Informatique.
+Project created following a request for a script in Python from my Advanced System Security teacher at the École Supérieure de Génie Informatique.
 
-Le script est écrit en Python 3, il utilise les librairies : 
-- Scapy : Pour la manipulation de paquet.
-- Netfilterqueue : Pour le filtrage des paquets en utilisant le Firewall Netfilter et l'option Queue afin de mettre ces derniers en attente le temps d'une décision.
+The script is written in Python 3, it uses the libraries :
+- Scapy : For package manipulation.
+- Netfilterqueue : For filtering packets using the Netfilter Firewall and the Queue option in order to put them on hold for the time of a decision..
 
 <p align="center">
   <img width="450" height="370" src="Schéma_NFQUEUE.png">
 </p>
 
-Actuellement une action manuelle de la part d'un utilisateur est nécessaire afin de filtrer les paquets un à un. 
-Des whitelist / blacklist sont mises en place afin de ne pas avoir de demandes d'actions à un utilisateur sur des paquets deja traités.
+Currently a manual action from a user is needed to filter the packages one by one.
+Whitelist / blacklist are set up in order to not have requests for action to a user on already processed packets.
 
 TO DO :
-- Implémenter une API axée Cyber Threat Intelligence afin d'effectuer le filtrage de façon automatique en fonction d'un IOC existant ou non sur l'adresse IP distante (IP d'un C2, IP utilisée dans le cadre d'une campagne malveillante...)
-- Mise en place de threads afin de traiter les paquets sur plusieurs Queue.
-- Mise en place d'une interface Graphique.
+- Implement an API focused on Cyber Threat Intelligence in order to perform automatic filtering based on an IOC existing or not on the remote IP address (IP of a C&C, IP used in a malicious campaign et cetera).
+- Implementation of threads to process packets on several queues.
+- Implementation of a GUI (Graphical User Interface).
