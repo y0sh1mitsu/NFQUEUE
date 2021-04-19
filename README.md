@@ -13,6 +13,6 @@ Currently a manual action from a user is needed to filter the packages one by on
 Whitelist / blacklist are set up in order to not have requests for action to a user on already processed packets.
 
 TO DO :
-- Implement an API focused on Cyber Threat Intelligence in order to perform automatic filtering based on an IOC existing or not on the remote IP address (IP of a C&C, IP used in a malicious campaign et cetera).
+- Implement an API focused on Cyber Threat Intelligence in order to perform automatic filtering based on an IOC existing or not on the remote IP address (IP of a C&C or an IP used in a malicious campaign et cetera).
 - Implementation of threads to process packets on several queues.
-- Implementation of a GUI (Graphical User Interface).
+- Implementation of a GUI.
