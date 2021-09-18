@@ -1,26 +1,23 @@
-#!/bin/python3
-# Julien HOURY. 
-#Import des librairies
+#!/bin/python3 
+#librairies import
 from scapy.all import *
 from netfilterqueue import NetfilterQueue
 
-#whitelist des paquets deja filtré & accepté 
-whitelist=[]
+#whitelist packets who are deja filtered and accepted
 
-#blacklist des paquets deja filtré & refusé
+#blacklist packets who are deja filtered and denied
 blacklist=[]
 
-#Definitiion de la fonction de filtrage
+#Function for filter
 def Filtrage_paquet(packet):
     pkt=IP(packet.get_payload())
     ipsrc=pkt[IP].src
     ipdst=pkt[IP].dst
 
-#variable pour blacklist / whitelist
+#var for blacklist / whitelist
     regles=[ipsrc,ipdst]
 
-#montre a l'utilisateur l'ip src et dst du paquet
-#boucle pour blacklist / whitelist
+#show user ip src & dst
     if regles in whitelist:
         packet.accept()
     else:
@@ -35,11 +32,11 @@ def Filtrage_paquet(packet):
 #Objet nfqueue
 nfqueue = NetfilterQueue()
 
-#fait appel a la fonction de filtrage pour mettre les paquets sur la queue numero 1
+#call filter function for put packets on the first queue
 nfqueue.bind(1, Filtrage_paquet)
 
 try:
-    print ('en écoute')
+    print ('i love the smell of packets in the morning')
     nfqueue.run()
     exit()
 except KeyboardInterrupt:
